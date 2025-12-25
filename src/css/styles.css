@@ -136,6 +136,8 @@ input {
     color: var(--text-light);
     max-width: 600px;
     margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Кнопки */
