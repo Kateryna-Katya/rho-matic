@@ -772,3 +772,225 @@ input {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--text-light);
 }
+/* --- Стили для юридических страниц (Legal & Cookies) --- */
+
+.pages {
+    padding: 120px 0 100px;
+    background: radial-gradient(circle at top right, rgba(99, 102, 241, 0.03), transparent);
+    min-height: 100vh;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 40px;
+    color: var(--brand);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.back-link:hover {
+    transform: translateX(-5px);
+}
+
+.pages__header {
+    margin-bottom: 60px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 40px;
+}
+
+.pages__header h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    margin: 15px 0 25px;
+    color: var(--text);
+}
+
+.lead {
+    font-size: 1.25rem;
+    color: var(--text-light);
+    line-height: 1.7;
+    max-width: 900px;
+}
+
+.pages__content {
+    max-width: 850px;
+}
+
+.pages__content h2 {
+    font-size: 1.8rem;
+    margin: 45px 0 20px;
+    color: var(--text);
+    position: relative;
+    padding-left: 20px;
+}
+
+.pages__content h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 24px;
+    background: var(--accent);
+    border-radius: 10px;
+}
+
+.pages__content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-light);
+    margin-bottom: 25px;
+}
+
+.styled-list {
+    margin-bottom: 35px;
+}
+
+.styled-list li {
+    margin-bottom: 15px;
+    padding-left: 30px;
+    position: relative;
+    color: var(--text-light);
+    font-size: 1.05rem;
+}
+
+.styled-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--brand);
+    font-weight: bold;
+}
+
+.styled-list li strong {
+    color: var(--text);
+}
+
+/* Контактный блок на странице */
+.pages__contact-box {
+    margin-top: 60px;
+    padding: 40px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+.contact-simple {
+    margin-top: 20px;
+}
+
+.contact-simple li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: var(--text-light);
+}
+
+.contact-simple a {
+    color: var(--brand);
+    font-weight: 600;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    .pages {
+        padding-top: 80px;
+    }
+
+    .pages__header h1 {
+        font-size: 2.2rem;
+    }
+
+    .pages__contact-box {
+        padding: 25px;
+    }
+}
+/* --- Специфические стили для Disclaimer --- */
+
+.badge--warning {
+    background: rgba(245, 158, 11, 0.1);
+    color: #f59e0b;
+}
+
+.disclaimer-box {
+    margin-bottom: 40px;
+}
+
+.disclaimer-box h2 {
+    margin-top: 0 !important;
+}
+
+/* Блок повышенного внимания (Риски) */
+.alert-box {
+    background: #fffbeb;
+    border: 1px solid #fef3c7;
+    padding: 30px;
+    border-radius: var(--radius-md);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.alert-box__icon {
+    width: 40px;
+    height: 40px;
+    background: #f59e0b;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.alert-box h2::before {
+    background: #f59e0b;
+    /* Меняем цвет маркера на оранжевый для рисков */
+}
+
+.alert-box p {
+    margin-bottom: 0;
+    color: #92400e;
+}
+
+@media (max-width: 600px) {
+    .alert-box {
+        flex-direction: column;
+        padding: 20px;
+    }
+}
+/* Дополнительный стиль для информационной плашки в политике */
+.alert-box--info {
+    background: #eff6ff;
+    border-color: #dbeafe;
+    color: #1e40af;
+    border-left: 4px solid var(--brand);
+    padding: 20px 25px;
+    margin: 30px 0;
+}
+
+.legal-section {
+    margin-bottom: 50px;
+}
+
+.legal-section h2 {
+    margin-bottom: 25px !important;
+}
+/* Поддержка нумерованных списков в legal-стиле */
+.styled-list--ordered {
+    counter-reset: custom-counter;
+}
+
+.styled-list--ordered li {
+    counter-increment: custom-counter;
+    list-style-type: none;
+}
+
+.styled-list--ordered li::before {
+    content: counter(custom-counter) ".";
+    font-weight: 700;
+    color: var(--brand);
+    margin-right: 10px;
+}
