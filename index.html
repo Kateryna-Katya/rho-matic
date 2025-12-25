@@ -1,56 +1,287 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/rho-matic/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rho-Matic — Инновации на пальцах</title>
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Outfit:wght@600;700;800&display=swap"
+    rel="stylesheet">
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/split-type"></script>
     <script type="module" crossorigin src="/rho-matic/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/rho-matic/assets/styles-guStct1H.css">
+    <link rel="stylesheet" crossorigin href="/rho-matic/assets/styles-CZti_m0J.css">
   </head>
   <body>
     <header class="header">
-  <div class="container">
+  <div class="container header__container">
+    <a href="./#hero" class="logo">
+      <span class="logo__icon"></span>
+      <span class="logo__text">Rho-Matic</span>
+    </a>
+
     <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
+      <ul class="nav__list">
+        <li><a href="./#hero" class="nav__link">Главная</a></li>
+        <li><a href="./#platform" class="nav__link">Платформа</a></li>
+        <li><a href="./#benefits" class="nav__link">Преимущества</a></li>
+        <li><a href="./#innovations" class="nav__link">Инновации</a></li>
+        <li><a href="./#education" class="nav__link">Обучение</a></li>
       </ul>
     </nav>
+
+    <div class="header__actions">
+      <a href="./#contact" class="btn btn--primary header__btn">Начать сейчас</a>
+      <button class="menu-toggle" aria-label="Menu">
+        <span></span><span></span>
+      </button>
+    </div>
   </div>
 </header>
-
+<div class="mobile-menu">
+  <nav class="mobile-menu__nav">
+    <a href="./#hero" class="mobile-menu__link">Главная</a>
+    <a href="./#platform" class="mobile-menu__link">Платформа</a>
+    <a href="./#benefits" class="mobile-menu__link">Преимущества</a>
+    <a href="./#innovations" class="mobile-menu__link">Инновации</a>
+    <a href="./#education" class="mobile-menu__link">Обучение</a>
+    <a href="./#contact" class="btn btn--primary">Запросить доступ</a>
+  </nav>
+</div>
 
     <main>
       <!-- Loads the specified .html file -->
-      
+      <section class="hero" id="hero">
+    <div class="container">
+        <div class="hero__content">
+            <span class="badge" data-aos="fade-up">Платформа года в Европе</span>
+            <h1 class="hero__title" id="hero-title">Технологии нового поколения для реальных задач</h1>
+            <p class="hero__subtitle">Воплотите мечты в реальность с помощью передовой цифровой инфраструктуры. Легко
+                разобраться без опыта за 2 минуты.</p>
+            <div class="hero__btns">
+                <a href="#contact" class="btn btn--primary btn--lg">Узнать детали</a>
+                <a href="#platform" class="btn btn--outline btn--lg">Оценить перспективы</a>
+            </div>
+        </div>
+    </div>
+    <div class="hero__bg">
+        <div class="hero__circle hero__circle--1"></div>
+        <div class="hero__circle hero__circle--2"></div>
+    </div>
+</section>
+
+<section class="section platform" id="platform">
+    <div class="container">
+        <div class="grid grid--2">
+            <div class="platform__image">
+                <img src="img/placeholder.png" alt="Platform" class="reveal-img">
+            </div>
+            <div class="platform__content">
+                <h2 class="section-title">Решения, которые меняют правила игры</h2>
+                <p class="section-text">Инновационная технология rho-matic.blog — это не просто курсы, это
+                    AI-инструменты для реальных задач. Мы создали среду, где пошаговый путь понятен каждому, вне
+                    зависимости от бэкграунда.</p>
+                <ul class="feature-list">
+                    <li><i data-lucide="check-circle"></i> Быстрый и лёгкий старт</li>
+                    <li><i data-lucide="check-circle"></i> Подключение за 2 минуты</li>
+                    <li><i data-lucide="check-circle"></i> Экспертная поддержка 24/7</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section benefits" id="benefits">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2 class="section-title">Ваша стратегия роста</h2>
+            <p class="section-text">Откройте новые возможности с нашими практиками, применимыми уже сегодня.</p>
+        </div>
+        <div class="grid grid--3">
+            <div class="card card--benefit">
+                <div class="card__icon"><i data-lucide="zap"></i></div>
+                <h3>Инновации</h3>
+                <p>Постройте карьеру, которая работает на вас, используя технологии будущего.</p>
+            </div>
+            <div class="card card--benefit">
+                <div class="card__icon"><i data-lucide="trending-up"></i></div>
+                <h3>Пассивный доход</h3>
+                <p>Технология для пассивного дохода через автоматизацию обучения.</p>
+            </div>
+            <div class="card card--benefit">
+                <div class="card__icon"><i data-lucide="globe"></i></div>
+                <h3>Доступность</h3>
+                <p>Предложение активно только в странах ЕС. Доступ открыт сегодня.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section innovations" id="innovations">
+    <div class="container">
+        <div class="innovations__banner">
+            <div class="innovations__info">
+                <h2>Переосмыслите подход к развитию</h2>
+                <p>Передовая цифровая инфраструктура доступна в один клик. Расширьте горизонты вашего проекта.</p>
+                <a href="#contact" class="btn btn--white">Запросить доступ</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section education" id="education">
+    <div class="container">
+        <h2 class="section-title">База знаний</h2>
+        <div class="grid grid--3">
+            <article class="card card--post">
+                <img src="img/placeholder.png" alt="Blog" class="card__img">
+                <div class="card__body">
+                    <span class="card__tag">AI</span>
+                    <h3>Как AI-инструменты меняют обучение</h3>
+                    <a href="#" class="card__link">Читать далее →</a>
+                </div>
+            </article>
+            <article class="card card--post">
+                <img src="img/placeholder.png" alt="Blog" class="card__img">
+                <div class="card__body">
+                    <span class="card__tag">Бизнес</span>
+                    <h3>Стратегия роста на базе инноваций</h3>
+                    <a href="#" class="card__link">Читать далее →</a>
+                </div>
+            </article>
+            <article class="card card--post">
+                <img src="img/placeholder.png" alt="Blog" class="card__img">
+                <div class="card__body">
+                    <span class="card__tag">Тренд</span>
+                    <h3>Будущее образования в Европе</h3>
+                    <a href="#" class="card__link">Читать далее →</a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section contact" id="contact">
+    <div class="container">
+        <div class="grid grid--2">
+            <div class="contact__info">
+                <h2 class="section-title">Бесплатная консультация</h2>
+                <p class="section-text">Оставьте заявку, и наш проверенный партнер свяжется с вами для уточнения деталей
+                    доступа.</p>
+<div class="contact__details">
+    <div class="contact__item">
+        <i data-lucide="phone"></i>
+        <span>+33 1 42 68 53 00</span>
+    </div>
+    <div class="contact__item">
+        <i data-lucide="mail"></i>
+        <span>support@rho-matic.blog</span>
+    </div>
+    <div class="contact__item">
+        <i data-lucide="map-pin"></i>
+        <span>8 Rue de la Paix, 75002 Paris, France</span>
+    </div>
+</div>
+            </div>
+            <div class="contact__form-wrapper">
+                <form id="mainForm" class="form">
+                    <div class="form__group">
+                        <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="form__group">
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form__group">
+                        <input type="tel" id="phone" name="phone" placeholder="Телефон (только цифры)" required>
+                    </div>
+                    <div class="form__group">
+                        <div class="captcha">
+                            <label id="captcha-label">Сколько будет 5 + 3?</label>
+                            <input type="number" id="captcha-input" placeholder="Ответ" required>
+                        </div>
+                    </div>
+                    <div class="form__checkbox">
+                        <input type="checkbox" id="agree" required>
+                        <label for="agree">Я согласен на обработку персональных данных</label>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full">Отправить запрос</button>
+                    <div id="form-message" class="form__status"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
     </main>
 
     <footer class="footer">
-  <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
+  <div class="container footer__grid">
+    <div class="footer__col footer__col--info">
+      <a href="./#hero" class="logo logo--footer">
+        <span class="logo__icon"></span>
+        <span class="logo__text">Rho-Matic</span>
       </a>
-    </p>
+      <p class="footer__description">
+        Инновационная технология обучения, которая меняет правила игры. Сделаем сложное понятным.
+      </p>
+    </div>
+
+    <div class="footer__col">
+      <h4 class="footer__title">Меню</h4>
+      <ul class="footer__links">
+        <li><a href="./#hero">Главная</a></li>
+        <li><a href="./#platform">Платформа</a></li>
+        <li><a href="./#benefits">Преимущества</a></li>
+        <li><a href="./#innovations">Инновации</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h4 class="footer__title">Документы</h4>
+      <ul class="footer__links">
+        <li><a href="./privacy.html">Privacy Policy</a></li>
+        <li><a href="./cookies.html">Cookie Policy</a></li>
+        <li><a href="./terms.html">Terms of Service</a></li>
+        <li><a href="./return.html">Return Policy</a></li>
+        <li><a href="./disclaimer.html">Disclaimer</a></li>
+        <li><a href="./personal-data-policy.html">Personal Data</a></li>
+      </ul>
+    </div>
+
+<div class="footer__col">
+  <h4 class="footer__title">Контакты</h4>
+  <ul class="footer__contact">
+    <li>
+      <i data-lucide="phone" class="icon--small"></i>
+      <a href="tel:+33142685300">+33 1 42 68 53 00</a>
+    </li>
+    <li>
+      <i data-lucide="mail" class="icon--small"></i>
+      <a href="mailto:support@rho-matic.blog">support@rho-matic.blog</a>
+    </li>
+    <li>
+      <i data-lucide="map-pin" class="icon--small"></i>
+      <span>8 Rue de la Paix, 75002 Paris</span>
+    </li>
+  </ul>
+</div>
+  </div>
+  <div class="container footer__bottom">
+    <p>&copy; 2025 rho-matic.blog. Платформа года. Все права защищены.</p>
   </div>
 </footer>
-
+    <div id="cookie-popup" class="cookie-popup">
+      <p>Этот сайт использует cookies для улучшения работы. Подробнее — в нашей <a href="./cookies.html">Cookie политике</a>.
+      </p>
+      <button id="accept-cookies" class="btn btn--primary btn--sm">Принять</button>
+    </div>
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
   </body>
 </html>
